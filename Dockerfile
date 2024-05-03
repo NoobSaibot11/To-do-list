@@ -1,11 +1,14 @@
 # Use an existing image as a base
-FROM nginx:latest
+FROM nginx:alpine
 
 # Set the working directory in the container
-COPY ./todo_list/ /usr/share/nginx/html/
+WORKDIR /usr/share/nginx/html
 
 # Copy the necessary files into the container
-COPY . .
+COPY index.html .
+COPY favicon.ico .
+COPY css ./css
+COPY js ./js
 
-# Expose port 8000
-EXPOSE 8000
+# Expose port 80
+EXPOSE 80
