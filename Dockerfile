@@ -10,5 +10,5 @@ COPY favicon.ico .
 COPY css ./css
 COPY js ./js
 
-# Expose port 80
-EXPOSE 80
+# Expose port 8000
+EXPOSE 8000
